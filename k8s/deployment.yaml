@@ -2,30 +2,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: conversao
+  name: conversao-temperatura
 spec:
   selector:
     matchLabels:
-      app: conversao
+      app: conversao-temperatura
   template:
     metadata:
       labels:
-        app: conversao
+        app: conversao-temperatura
     spec:
       containers:
-        - name: conversao
-          image: giozandonai/conversao-temperatura:latest
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: conversao
-spec:
-  selector:
-    app: conversao
-  ports:
-  - port: 80
-    targetPort: 8080
-    nodePort: 30000
-  type: NodePort
+        - name: conversao-temperatura
+          image: giozandonai/conversao-temperatura:v1
