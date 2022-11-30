@@ -41,6 +41,6 @@ CMD ["node", "server.js"]
 `http://localhost:8080``
 
 ## Subindo com KUBERNETES
-Acessar a pasta ./k8s:
-`kubectl apply -f . -R`
-`http://nome_dominio`
+Acessar a pasta ./k8s:<br>
+`kubectl apply -f . -R`<br>
+`http://nome_dominio`<br>
